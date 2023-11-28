@@ -1,0 +1,150 @@
+<%- include('../layout/includes/header', { title: 'User Index Page' }) %>
+
+<div class="row fixed-div_">
+    <nav aria-label="breadcrumb" class="breadcrumbs">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#"> Scheduled Appointments</a></li>
+        <!-- <li class="breadcrumb-item"><a href="#">Library</a></li> -->
+        <li class="breadcrumb-item active" aria-current="page">Scheduled Appointments</li>
+    </ol>
+    </nav>
+    </div>
+        <div class="row ">
+            <div class="col-lg-12">
+                <div class="page-title-box align-self-center d-none d-md-block">
+                <h4 class="page-title mb-0">All Scheduled Appointments</h4>
+                </div>
+            </div>
+        </div>
+<div class="row mb-4">
+                        <div class="col-xl-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <button type="button" class="btn font-16 btn-primary waves-effect waves-light w-100"
+                                        id="btn-new-event" data-bs-toggle="modal" data-bs-target="#event-modal">
+                                        Create New Event
+                                    </button>
+        
+                                    <div id="external-events">
+                                        <br>
+                                        <p class="text-muted">Note: These color indicate the status of appointment</p>
+                                        <div class=" fc-event bg-success" data-class="bg-success">
+                                            <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>Finished Appointment
+                                        </div>
+                                        <div class=" fc-event bg-info" data-class="bg-info">
+                                            <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>Follow Up
+                                        </div>
+                                        <div class="fc-event bg-warning" data-class="bg-warning">
+                                            <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>Scheduled
+                                        </div>
+                                        <div class="fc-event bg-danger" data-class="bg-danger">
+                                            <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i> In Consultation
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div> <!-- end col-->
+                        <div class="col-xl-9">
+                            <div class="card mb-0">
+                                <div class="card-body">
+                                    <div id="calendar"></div>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+                    </div> <!-- end row-->
+                    <div style='clear:both'></div>
+        
+                   <!-- Add New Event MODAL -->
+                   <div class="modal fade" id="event-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                   aria-hidden="true">
+                   <div class="modal-dialog modal-dialog-centered">
+                       <div class="modal-content">
+                           <div class="modal-header py-3 px-4">
+                               <h5 class="modal-title" id="modal-title">Schedule Appointment</h5>
+                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                           </div>
+   
+                           <div class="modal-body p-4">
+                               <form class="needs-validation" name="event-form" id="form-event" novalidate>
+                               <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3 form-group">
+                                    <label class="form-label">Volunteer Id</label>
+                                    <select class="form-control select2_schedule_appoint">
+                                        <option>#1100</option>
+                                        <option>#1101</option>
+                                        <option>#1102</option>
+                                        <option>#1103</option>
+                                        <option>#1104</option>
+                                        <option>#1105</option>
+                                    </select>
+
+                                </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                    <div class="mb-3 form-group">
+                                    <label class="form-label">Volunteer Name</label>
+                                    <select class="form-control select2_schedule_appoint">
+                                        <option>Jacob Hunter</option>
+                                        <option>Jamal Burnett	</option>
+                                        <option>Juan Mitchell</option>
+                                        <option>Neal Matthews</option>
+                                        <option>Tiger Nixon</option>
+
+                                    </select>
+
+                                </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Date</label>
+                                                    <div class="input-group" id="datepicker1">
+                                                        <input type="text" class="form-control" placeholder="dd M, yyyy"
+                                                            data-date-format="dd M, yyyy" data-date-container='#datepicker1' data-provide="datepicker">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Time</label>
+                                                    <div class="input-group">
+                                                    <input type="text" id="timePicker" class="form-control timepicker-custom" placeholder="Please select Time">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                            <div class="mb-3">
+                                            <label class="form-label">Appointment Agenda</label>
+                                            <textarea required="" id="event-title" class="form-control" rows="3"></textarea>
+                                            </div>
+                                            </div>
+                                            
+
+                                </div>
+                                   <div class="row mt-2">
+                                       <div class="col-6">
+                                           <button type="button" class="btn btn-danger"
+                                               id="btn-delete-event">Delete</button>
+                                       </div> 
+                                       <div class="col-6 text-end">
+                                           <button type="button" class="btn btn-light me-1"
+                                               data-bs-dismiss="modal">Close</button>
+                                           <button type="submit" class="btn btn-success" id="btn-save-event">Save</button>
+                                       </div> 
+                                   </div> 
+                               </form>
+                           </div>
+                       </div>
+                    
+                   </div>
+         
+               </div>
+               
+<%- include('../layout/includes/footer') %>
+<script>
+    $('.select2_schedule_appoint').select2({
+      dropdownParent: $('#event-modal')
+      });  
+</script>

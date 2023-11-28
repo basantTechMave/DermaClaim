@@ -1,0 +1,104 @@
+<%- include('../layout/includes/header', { title: 'User Index Page' }) %>
+    <div class="row fixed-div_">
+        <nav aria-label="breadcrumb" class="breadcrumbs">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                <!-- <li class="breadcrumb-item"><a href="#">Library</a></li> -->
+                <li class="breadcrumb-item active" aria-current="page">Company</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-title-box align-self-center d-none d-md-block">
+                <h4 class="page-title mb-0">Company</h4>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="top_box__">
+                        <h4 class="card-title">All Company</h4>
+                        <a href="/company/add" class="btn btn-primary waves-effect waves-light"> + Add Company</a>
+                    </div>
+                    <table id="datatable" class="table volunteer_table table-bordered dt-responsive nowrap"
+                        style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                        <thead>
+                            <tr>
+                                <th>Company Name</th>
+                                <th>Email</th>
+                                <th>Number</th>
+                                <th>Total Product</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Blissful Skin</td>
+                                <td>BlissfulSkin@gmail.com</td>
+                                <td>9780534021</td>
+                                <td>5</td>
+                                <td>
+                                    <div class="d-flex gap-2">
+                                        <a href="/company/view" class="btn btn_view btn-sm"><i class="mdi mdi-eye"
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-title="View"></i></a>
+                                        <a href="/company/edit" class="btn btn_edit btn-sm"><i
+                                                class="mdi mdi-pencil"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Pure Beauty</td>
+                                <td>PureBeauty@gmail.com</td>
+                                <td>9780534021</td>
+                                <td>3</td>
+                                <td>
+                                    <div class="d-flex gap-2">
+                                        <a href="/company/view" class="btn btn_view btn-sm"><i class="mdi mdi-eye"
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-title="View"></i></a>
+                                        <a href="/company/edit" class="btn btn_edit btn-sm"><i
+                                                class="mdi mdi-pencil"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Radiant Glow</td>
+                                <td>RadiantGlow@gmail.com</td>
+                                <td>9780534021</td>
+                                <td>4</td>
+                                <td>
+                                    <div class="d-flex gap-2">
+                                        <a href="/company/view" class="btn btn_view btn-sm"><i class="mdi mdi-eye"
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-title="View"></i></a>
+                                        <a href="/company/edit" class="btn btn_edit btn-sm"><i
+                                                class="mdi mdi-pencil"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Elevate Skincare</td>
+                                <td>ElevateSkincare@gmail.com</td>
+                                <td>9780534021</td>
+                                <td>2</td>
+                                <td>
+                                    <div class="d-flex gap-2">
+                                        <a href="/company/view" class="btn btn_view btn-sm"><i class="mdi mdi-eye"
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-title="View"></i></a>
+                                        <a href="/company/edit" class="btn btn_edit btn-sm"><i
+                                                class="mdi mdi-pencil"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div> <!-- end col -->
+    </div>
+    <%- include('../layout/includes/footer') %>

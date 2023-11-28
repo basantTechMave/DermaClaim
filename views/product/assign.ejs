@@ -1,0 +1,166 @@
+<%- include('../layout/includes/header', { title: 'User Index Page' }) %>
+
+    <div class="row fixed-div_">
+        <nav aria-label="breadcrumb" class="breadcrumbs">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                <!-- <li class="breadcrumb-item"><a href="#">Library</a></li> -->
+                <li class="breadcrumb-item active" aria-current="page">Assign Products</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-title-box align-self-center d-none d-md-block">
+                <h4 class="page-title mb-0">Assign Products</h4>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="top_box__">
+                        <h4 class="card-title">All Assign Products</h4>
+                        <a href="/volunteer/add" class="btn btn-primary waves-effect waves-light"
+                            data-bs-toggle="modal" data-bs-target="#assign_product">Assign Product</a>
+                    </div>
+
+                    <table id="datatable" class="table volunteer_table table-bordered dt-responsive nowrap"
+                        style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                        <thead>
+                            <tr>
+                                <th>Assign Id</th>
+                                <th>Product Name</th>
+                                <th>Company Name</th>
+                                <th>Volunteer Name</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Date</th>
+                                <th>Product usage</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+
+                        <tbody>
+                            <tr>
+                                <td>#1100</td>
+                                <td>Face mask</td>
+                                <td>Blissful Skin</td>
+                                <td>Tiger Nixon</td>
+                                <td>20 year</td>
+                                <td>Male</td>
+                                <td>24 Oct, 2023</td>
+                                <th>10 days</th>
+                                <td>
+                                    <div class="d-flex gap-2">
+                                        <a href="/product/history"
+                                            class="btn btn-primary waves-effect waves-light">Daily update</a>
+                                        <a href="javascript:void(0);" class="btn btn_edit btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#edit_assign_product"><i class="mdi mdi-pencil"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn_delete btn-sm"><i
+                                                class="mdi mdi-delete" data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-title="Delete"></i></a>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#1101</td>
+                                <td>Eye contour products</td>
+                                <td>Pure Beauty</td>
+                                <td>Neal Matthews</td>
+                                <td>26 year</td>
+                                <td>Male</td>
+                                <td>27 Oct, 2023</td>
+                                <th>15 days</th>
+                                <td>
+                                    <div class="d-flex gap-2">
+                                        <a href="/daily/update"
+                                            class="btn btn-primary waves-effect waves-light">Daily update</a>
+                                        <a href="javascript:void(0);" class="btn btn_edit btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#edit_assign_product"><i class="mdi mdi-pencil"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn_delete btn-sm"><i
+                                                class="mdi mdi-delete" data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-title="Delete"></i></a>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#1102</td>
+                                <td>Lip care products</td>
+                                <td>Radiant Glow</td>
+                                <td>Jamal Burnett</td>
+                                <td>20 year</td>
+                                <td>Male</td>
+                                <td>02 Nov, 2023</td>
+                                <th>20 days</th>
+                                <td>
+                                    <div class="d-flex gap-2">
+                                        <a href="/daily/update"
+                                            class="btn btn-primary waves-effect waves-light">Daily update</a>
+                                        <a href="javascript:void(0);" class="btn btn_edit btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#edit_assign_product"><i class="mdi mdi-pencil"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn_delete btn-sm"><i
+                                                class="mdi mdi-delete" data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-title="Delete"></i></a>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#1103</td>
+                                <td>Body care products</td>
+                                <td>Elevate Skincare</td>
+                                <td>Jamal Burnett</td>
+                                <td>23 year</td>
+                                <td>Female</td>
+                                <td>05 Nov, 2023</td>
+                                <th>30 days</th>
+                                <td>
+                                    <div class="d-flex gap-2">
+                                        <a href="/daily/update"
+                                            class="btn btn-primary waves-effect waves-light">Daily update</a>
+                                        <a href="javascript:void(0);" class="btn btn_edit btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#edit_assign_product"><i class="mdi mdi-pencil"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn_delete btn-sm"><i
+                                                class="mdi mdi-delete" data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-title="Delete"></i></a>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#1104</td>
+                                <td>Soap product</td>
+                                <td>Harmony Spa</td>
+                                <td>Ronald Taylor</td>
+                                <td>20 year</td>
+                                <td>Female</td>
+                                <td>08 Nov, 2023</td>
+                                <th>20 days</th>
+                                <td>
+                                    <div class="d-flex gap-2">
+                                        <a href="/daily/update"
+                                            class="btn btn-primary waves-effect waves-light">Daily update</a>
+                                        <a href="javascript:void(0);" class="btn btn_edit btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#edit_assign_product"><i class="mdi mdi-pencil"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn_delete btn-sm"><i
+                                                class="mdi mdi-delete" data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-title="Delete"></i></a>
+
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div> <!-- end col -->
+    </div>
+
+    <%- include('../layout/includes/footer') %>
